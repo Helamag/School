@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Example command to list files in the current directory
+    int return_value = system("ls -l");
+    
+    if (return_value == -1) {
+        perror("system");
+        return 1;
+    }
+    
+    // Example command to print the current working directory
+    return_value = system("pwd");
+    
+    if (return_value == -1) {
+        perror("system");
+        return 1;
+    }
+
+    return 0;
+}
